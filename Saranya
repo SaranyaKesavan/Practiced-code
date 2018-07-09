@@ -1,0 +1,8 @@
+class Saranya
+{
+	public static void main(String args...)
+	{
+		System.out.println("hello world");
+	}
+}
+int name;

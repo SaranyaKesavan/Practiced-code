@@ -1,0 +1,83 @@
+public class Student
+{
+	private int rollno;
+	private String name;
+	private double mark1;
+	private double mark2;
+	private double mark3;
+	double total;
+	double avg;
+	
+	Student(int rno,String name,double m1,double m2,double m3)
+	{
+		this.rollno=rno;
+		this.name=name;
+		this.mark1=m1;
+		this.mark2=m2;
+		this.mark3=m3;	
+		//this.total=this.mark1+this.mark2+this.mark3;
+		//this.avg=this.total/10;	
+	}
+	void display()
+	{
+		System.out.println(rollno+" "+name+" "+mark1+" "+mark2+" "+mark3+" "+total+" "+avg);
+	}
+	/*public int getRollno(int rollno)
+	{
+		return rollno;
+	}
+	public void setRollno(int rollno)
+	{
+		this.rollno=rollno;
+	}
+        
+	public String getName(String name)
+	{
+		return name;
+	}
+	public void setName(String name)
+	{
+		this.name=name;
+	}
+            
+	public double getMark1(double mark1)
+	{
+		return mark1;
+	}
+	public void setMark1(double mark1)
+	{
+		this.mark1=mark1;
+	}
+            
+	public double getMark2(double mark2)
+	{
+		return mark2;
+	}
+	public void setMark2(double mark2)
+	{
+		this.mark2=mark2;
+	}
+            
+	public double getMark3(double mark3)
+	{
+		return mark3;
+	}
+	public void setMark3(double mark3)
+	{
+		this.mark3=mark3;
+	}
+	*/
+	double total(double mark1,double mark2,double mark3)
+	{
+		total=mark1+mark2+mark3;
+		return total;
+	}         
+	double average(double total) 
+	{
+		avg=total/3;
+		return avg;
+	}
+
+		
+		                                                                                       
+}

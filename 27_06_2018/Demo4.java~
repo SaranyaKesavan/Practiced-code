@@ -1,0 +1,41 @@
+//File Write---Binary
+import java.io.*;
+public class Demo4
+{
+	public static void main(String []args)
+	{
+		
+		String filename="test.txt";
+		try
+		{	String bytes;
+			byte[] buffer = new byte[1];
+			FileInputStream is=new FileInputStream(filename);
+			int total=0;
+			int nRead=0;
+			byte[] buffer1=new byte[1];
+			FileOutputStream os=new FileOutputStream("test2.txt");
+			while((nRead=is.read(buffer))!=-1)
+			{
+				System.out.println(new String(buffer));
+				//bytes=new String(buffer);		
+				//buffer1=bytes.getBytes();
+				//System.out.println(buffer1+"***");
+				os.write(buffer1);
+				total+=nRead;
+			}
+			
+			is.close();
+			System.out.println("Read "+total+" bytes.");
+			os.close();
+	
+			System.out.println("File created as "+buffer1.length+" bytes.");
+		}
+		catch(IOException ex)
+		{
+			System.out.println("Error writing file "+filename);
+			ex.printStackTrace();
+		}
+	
+		
+	}
+}

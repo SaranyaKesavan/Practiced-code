@@ -1,0 +1,35 @@
+// user-defined Exception
+import java.util.*;
+public class Demo4 
+{
+	public static void main(String args[])
+	{
+		while(true)
+		{
+			Scanner sc=new Scanner(System.in);
+			try
+			{
+				System.out.println("Enter reg.no : ");
+				String regno=sc.nextLine();
+				if(regno.length()!=10)
+				{
+					MyException d=new MyException("Invalid Number!");
+					throw d;
+				}
+				System.out.println("Entered number "+regno+" is valid");
+				break;
+			}
+			catch(MyException d)
+			{
+				d.getCause();//System.out.println("Invalid Number");
+			}
+		}
+	}
+}
+class MyException extends Exception
+{
+	MyException(String str)
+	{
+		super(str);
+	}
+}

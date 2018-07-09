@@ -1,0 +1,19 @@
+public class Vehicle{
+	private int noOfSeats;
+	public void setNoOfSeats(int value){
+		noOfSeats=value;
+	}
+}
+class Vehicle1{
+	private int noOfSeats;
+	public void setNoOfSeats(int value){
+		noOfSeats=value;
+	}
+}
+class Vechicle2{
+	private int noOfSeats;
+	public void setNoOfSeats(int value){
+		noOfSeats=value;
+	}
+}
+

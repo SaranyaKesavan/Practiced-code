@@ -1,0 +1,14 @@
+class Mark
+{
+	final int s1;
+	Mark()
+	{
+		 s1=400;
+		System.out.println(s1);
+	}
+	public static void main(String... args)
+	{
+		Mark m1=new Mark();
+		//m1.update();
+	}
+}

@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class Demo1
+{
+	public static void main(String... args)
+	{
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.println("Enter a value:");
+		int a=sc.nextInt();
+		int res=0;
+		while(a==0)
+		{
+		try
+		{
+		res=12/a;
+		
+		}
+		catch(ArithmeticException ae)
+		{
+			System.out.println("Error.........");
+		}
+
+		System.out.println("Enter a value:");
+		a=sc.nextInt();
+		}
+		res=12/a;
+		System.out.println("The result is "+res);
+	}
+}

@@ -1,0 +1,65 @@
+import java.util.Scanner;
+class Encapsulation
+{
+	//Student s[];
+	public static void main(String[] args)
+	{
+		
+		//int id;
+		Scanner sc=new Scanner(System.in);
+		int n;
+		System.out.println("Enter no of students");
+		n=sc.nextInt();
+		Student s[]=new Student[n];
+		//temp=new Student(id,name,m1,m2,m3);
+		//for(int i=0;i<n;i++)
+			
+		double[] average=new double[n]; 	
+		//s=new Student[n];
+		Student temp=new Student(0,"",0,0,0);		
+		for(int i=0;i<n;i++)
+		{
+			
+			System.out.println("Enter rollno");
+			int id=sc.nextInt();
+			System.out.println("Enter name");
+			sc.nextLine();			
+			String name=sc.nextLine();
+			System.out.println("Enter mark1");
+			double m1=sc.nextInt();
+			System.out.println("Enter mark2");
+			double m2=sc.nextInt();
+			System.out.println("Enter mark2");
+			double m3=sc.nextInt();
+			s[i]=new Student(id,name,m1,m2,m3);
+			//s[i].Student(id,name,m1,m2,m3);
+			double total=s[i].total(m1,m2,m3);
+			average[i]=s[i].average(total);
+			//len++;
+			//temp=new Student(0,"",0,0,0);		
+			if(i==0)
+				continue;
+			else
+			{	
+				int j;
+				double k=average[i];
+				temp=s[i];
+				for(j=i-1;j>=0 && k<average[j];j--)
+				{
+					average[j+1]=average[j];
+					s[j+1]=s[j];
+				}
+				average[j+1]=k;
+				s[j+1]=temp;
+
+			}
+				}
+		
+		System.out.println("*******************");
+		for(int i=0;i<n;i++)
+		{
+			s[i].display();
+		}
+			
+	}
+}

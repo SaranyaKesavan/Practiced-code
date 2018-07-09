@@ -1,0 +1,28 @@
+//File Read ----- binary
+import java.io.*;
+public class Demo2
+{
+	public static void main(String []args)
+	{
+		String filename="test.txt";
+		try
+		{
+			byte[] buffer = new byte[1000];
+			FileInputStream is=new FileInputStream(filename);
+			int total=0;
+			int nRead=0;
+			while((nRead=is.read(buffer))!=-1)
+			{
+				System.out.println(new String(buffer));
+				total+=nRead;
+			}
+			is.close();
+			System.out.println("Read "+total+" bytes.");
+		}
+		catch(IOException ex)
+		{
+			System.out.println("Error writing file "+filename);
+			ex.printStackTrace();
+		}
+	}
+}

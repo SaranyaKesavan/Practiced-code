@@ -1,0 +1,74 @@
+ class access
+
+{
+
+public int x;
+
+private int y;
+
+void cal(int a, int b)
+
+{
+
+x = a + 1;
+
+y = b;
+
+}
+
+}
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+  
+    public static String getSmallestAndLargest(String s, int k) {
+        String smallest = "";
+        String largest = "";
+        
+        // Complete the function
+        for(int i=0;i<s.length()-3;i++)
+        {
+           if((s.substring(i,i+1).compareTo(smallest))<0)
+               smallest=s.substring(i,i+3);
+            if((s.substring(i,i+1).compareTo(largest))>0)
+               largest=s.substring(i,i+3);
+        
+        }
+        // 'smallest' must be the lexicographically smallest substring of length 'k'
+        // 'largest' must be the lexicographically largest substring of length 'k'
+        
+        return smallest + "\n" + largest;
+    }
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String s = scan.next();
+        int k = scan.nextInt();
+        scan.close();
+      
+        System.out.println(getSmallestAndLargest(s, k));
+    }
+}
+
+{
+
+public static void main(String args[])
+
+{
+
+access obj = new access();
+
+obj.cal(2, 3);
+
+System.out.println(obj.x + " " + obj.y);
+
+}
+
+}
+
+
